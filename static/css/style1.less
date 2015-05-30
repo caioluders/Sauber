@@ -19,7 +19,7 @@ a {
 
 body {
 	overflow-x: hidden;
-	background-color: #000;
+	background-color: #4d4d4d;
 	padding: 0;
 	margin: 0;
 }
@@ -30,6 +30,8 @@ header {
 
 #a {
 	background-color: #fff;
+	.column(7);
+	width: 100%;
 }
 
 header div {
@@ -39,19 +41,22 @@ header div {
 div#logo {
 	padding-left: 90px;
 	font-family: "Politica", Sans-Serif;
-	width: 100px;
+	//width: 100px;
 	font-size: 28px;
 	.column(7);
+	width: 80%;
 }
 
 div#bar {
 	text-align: center;
+	.column(7);
+	width: 100%;
 }
 
 header input[type=text] {
-	.column(1);
-	.push(1);
-	width: 70%;
+	.column(5.7);
+	.push(0.25);
+	//width: 70%;
 	height: 30px;
 	border: 5px solid #ececec;
 	font-size: 18px;
@@ -65,6 +70,18 @@ header input[type=text] {
 		outline: 0;
 	}
 
+#opcoes {
+	.column(6.4);
+	display: block;
+}
+
+.opcao {
+	display: inline-block;
+	.column(0.914);
+	background-color: rgba(255, 255, 0, 0.5);
+	cursor: pointer;
+}
+
 #separator {
 	background-color: #ffff00;
 	.column(1);
@@ -74,18 +91,17 @@ header input[type=text] {
 
 #container {
 	margin-top: 50px;
-	background-color: #ececec;
+	background-color: #a5a5a5;
 	//width: 850px;
-	padding: 25px 0;
-	padding-left: 25px;
+	padding: 25px;
 
 	.column(5);
-	.push(1);
+	.push(0.6);
 }
 
 .politico {
 	display: inline-block;
-	width: 200px;
+	.column(1);
 
 	text-align: center;
 
@@ -96,6 +112,7 @@ header input[type=text] {
 a .politico:hover {
 	box-shadow: 2px 2px 6px #333;
 	box-shadow: -1px -1px 6px #333;
+	background-color: rgba(255, 255, 255, 0.5);
 }
 
 .politico .foto {
@@ -119,11 +136,15 @@ a .politico:hover {
 }
 
 .clear {
-	.column(12);
-	.push(7);
+	.column(1);
+	.push(6);
 	height: 50px;
 	width: 20px;
 	display: box;
+}
+
+.marcado {
+	background-color: blue;
 }
 
 // MOBILE:
