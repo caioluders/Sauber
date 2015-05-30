@@ -5,8 +5,8 @@ var CandidatoSvc = {
         	return $.ajax({url: url, headers: {'App-Token': this.token}});
 	},
 
-findAll: function(nome , cargo, estado , partido ) {
-	var params = '?nome=' + nome + '&cargo=' + cargo + '&estado=' + estado; 
+findAll: function(nome , estado , cargp , partido ) {
+	var params = '?nome=' + nome + '&estado=' + estado; 
 	if (partido != null) {
 		params.concat('&partido=' + partido);
 	}
@@ -21,7 +21,7 @@ var typingTimer;
 var doneTypingInterval = 5000
 
 $(document).on("keyup paste" , '#input_label' , function() {
-	CandidatoSvc.findAll($(this).val(), 1 , "BR" ).done(function(data) {
-                        console.log(data) ;
+	CandidatoSvc.findAll($(this).val(), $("#estado_input option:selected").text() ).done(function(data) {
+                        console.log(data[0]) ;
         });	
 });

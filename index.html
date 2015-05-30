@@ -9,9 +9,9 @@
 
 		<link rel="stylesheet" type="text/less" href="static/css/style1.less">
 		<!--link rel="stylesheet" type="text/less" href="static/css/responsive.less" media="screen"-->
-
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 		<script src="static/javascript/less-1.1.3.min.js"></script>
-
+		<script src="static/javascript/functions.js"></script>
 		<script>
 			function marcar(opcao, caller) {
 				document.getElementById(opcao).value = 1;
@@ -32,7 +32,7 @@
 			<div id="bar">
 				<form id="pesquisar">
 					<input id="input_label" type="text" name="pesquisar" placeholder="Pesquisar...">
-					<select>
+					<select id="estado_input">
 						<option value="BR">BR</option>
 						<option value="AC">AC</option>
 						<option value="AL">AL</option>
