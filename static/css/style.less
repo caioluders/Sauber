@@ -7,6 +7,16 @@
 
 // WEB:
 
+	// Main:
+* {
+	color: #333;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
 body {
 }
 
@@ -16,12 +26,13 @@ header {
 }
 
 header div {
-	width:100%;
+	.column(16);
 }
 
 div#logo {
 	margin-left: 90px;
 	font-family: "Politica", Sans-Serif;
+	font-size: 28px;
 }
 
 div#bar {
@@ -29,11 +40,13 @@ div#bar {
 }
 
 header input[type=text] {
-	width: 90%;
+	.column(15);
 	height: 30px;
 	border: 5px solid #ececec;
 	font-size: 18px;
-	padding-left: 15px;
+	padding-left: 35px;
+	background: url("images/search.png") no-repeat 4px 4px;
+
 }
 
 	header input[type=text]:focus {
@@ -42,9 +55,11 @@ header input[type=text] {
 	}
 
 #container {
+	margin-top: 50px;
 	background-color: #ececec;
 	width: 815px;
 	padding: 25px 0;
+	padding-left: 50px;
 
 	.column(11);
 	.push(2);
@@ -55,6 +70,14 @@ header input[type=text] {
 	width: 200px;
 
 	text-align: center;
+
+	margin-bottom: 25px;
+	padding: 25px 0;
+}
+
+a .politico:hover {
+	box-shadow: 2px 2px 6px #333;
+	box-shadow: -1px -1px 6px #333;
 }
 
 .politico .foto {
@@ -77,10 +100,37 @@ header input[type=text] {
 	border-color: #ff0000;
 }
 
+.clear {
+	.column(12);
+	.push(7);
+	height: 50px;
+	width: 20px;
+	display: box;
+}
+
 // MOBILE:
 
 @media screen and (max-width: 960px) {
-	#container {
+	header {
 		.column(6);
+	}
+
+	header div {
+		.column(6);
+	}
+
+	#logo {
+		.column(6);
+		margin: 0;
+		text-align: center;
+	}
+
+	#container {
+		.column(7);
+	}
+
+	#info1 {
+		.column(5);
+		.push(0);
 	}
 }

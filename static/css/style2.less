@@ -1,0 +1,31 @@
+// LESS
+@import "grid.less";
+
+@columns: 12;
+@column-width: 60;
+@gutter-width: 20;
+
+// WEB
+
+	// Politico.html
+
+#container {
+	background-color: inherit;
+	.push(0);
+}
+
+#info1 {
+	.column(4);
+	.pull(2);
+	background-color: #ececec;
+	text-align: center;
+}
+
+.politico.page {
+	
+}
+
+.politico.page img {
+	width: 200px;
+	height: 200px;
+}
