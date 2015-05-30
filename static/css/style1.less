@@ -26,6 +26,7 @@ body {
 
 header {
 	margin-bottom: 50px;
+	width: 100%;
 }
 
 #a {
@@ -55,8 +56,9 @@ div#bar {
 
 header input[type=text] {
 	.column(5.7);
-	.push(0.25);
-	//width: 70%;
+	//.push(0.20);
+	width: 90%;
+	margin-left: 3%;
 	height: 30px;
 	border: 5px solid #ececec;
 	font-size: 18px;
@@ -81,11 +83,13 @@ header select {
 #opcoes {
 	.column(6.4);
 	display: block;
+	width: 100%;
 }
 
 .opcao {
 	display: inline-block;
 	.column(0.914);
+	width: 14.28%;
 	background-color: rgba(255, 255, 0, 0.5);
 	cursor: pointer;
 }
@@ -100,11 +104,12 @@ header select {
 #container {
 	margin-top: 50px;
 	background-color: #a5a5a5;
-	//width: 850px;
 	padding: 25px;
 
 	.column(5);
 	.push(0.6);
+	width: 78.2%;
+	margin-left: 9%;
 }
 
 .politico {
@@ -158,30 +163,30 @@ a .politico:hover {
 // MOBILE:
 
 @media screen and (max-width: 960px) {
-	header {
-		.column(5);
+	header input[type=text] {
+		width: 85%;
+		margin-left: 3%;
 	}
 
-	header div {
-		.column(5);
+	.opcao {
+		display: box;
 	}
 
-	#logo {
-		.column(5);
-		margin: 0;
+	body {
 		text-align: center;
 	}
 
-	header input[type=text] {
-		.column(5);
-	}
-
 	#container {
-		.column(5);
+		.column(1.5);
+		width: 300px;
+		margin-left: 28%;
 	}
 
-	#info1 {
-		.column(5);
-		.push(0);
+	.politico {
+		.column(1.5);
+	}
+
+	.clear {
+		width: 100%;
 	}
 }
