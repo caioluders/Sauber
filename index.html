@@ -11,13 +11,19 @@
 		<!--link rel="stylesheet" type="text/less" href="static/css/responsive.less" media="screen"-->
 		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 		<script src="static/javascript/less-1.1.3.min.js"></script>
-		<script src="static/javascript/functions.js"></script>
 		<script>
+			var selected = "" ;
 			function marcar(opcao, caller) {
-				document.getElementById(opcao).value = 1;
-				caller.className = " marcado";
+				if ( opcao == selected ) {
+					selected = "" ;
+					caller.className = "opcao" ;
+				} else {
+					selected = opcao ;
+					caller.className = "marcado" ;
+				}
 			}
 		</script>
+		<script src="static/javascript/functions.js"></script>
 	</head>
 
 	<body>
@@ -62,24 +68,16 @@
 						<option value="SE">SE</option>
 						<option value="TO">TO</option>
 					</select>
-
-					<input id="presidente" type="hidden" name="presidente" value="0">
-					<input id="deputado-federal" type="hidden" name="deputado-federal" value="0">
-					<input id="senador" type="hidden" name="senador" value="0">
-					<input id="governador" type="hidden" name="governador" value="0">
-					<input id="prefeitos" type="hidden" name="prefeitos" value="0">
-					<input id="deputado-estadual" type="hidden" name="deputado-estadual" value="0">
-					<input id="vereador" type="hidden" name="vereador" value="0">
 				</form>
 
 				<div id="opcoes">
-					<div class="opcao" onclick="marcar(presidente, this);"><p>Presidente</p></div>
-					<div class="opcao" onclick="marcar(deputado-federal, this);"><p>Deputados Fed.</p></div>
-					<div class="opcao" onclick="marcar(senador, this);"><p>Senadores</p></div>
-					<div class="opcao" onclick="marcar(governador, this);"><p>Governadores</p></div>
-					<div class="opcao" onclick="marcar(prefeito, this);"><p>Prefeitos</p></div>
-					<div class="opcao" onclick="marcar(deputado-estadual, this);"><p>Deputados Est.</p></div>
-					<div class="opcao" onclick="marcar(vereador, this);"><p>Vereadores</p></div>
+					<div class="opcao" onclick="marcar('Presidente', this);"><p>Presidente</p></div>
+					<div class="opcao" onclick="marcar('Deputado Federal', this);"><p>Deputados Fed.</p></div>
+					<div class="opcao" onclick="marcar('Senador', this);"><p>Senadores</p></div>
+					<div class="opcao" onclick="marcar('Governador', this);"><p>Governadores</p></div>
+					<div class="opcao" onclick="marcar('Prefeito', this);"><p>Prefeitos</p></div>
+					<div class="opcao" onclick="marcar('Deputado Estadual', this);"><p>Deputados Est.</p></div>
+					<div class="opcao" onclick="marcar('Vereador', this);"><p>Vereadores</p></div>
 				</div>
 			</div>
 			</div>
