@@ -1,6 +1,8 @@
 // LESS
 @import "grid.less";
 
+@import url("http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700");
+
 @columns: 8;
 @column-width: 200px;
 @gutter-width: 0;
@@ -10,6 +12,7 @@
 	// Main:
 * {
 	color: #333;
+	font-family: "Open Sans Condensed", Sans-Serif;
 }
 
 a {
@@ -25,7 +28,7 @@ body {
 }
 
 header {
-	margin-bottom: 50px;
+	margin-bottom: 6%;
 	width: 100%;
 }
 
@@ -40,12 +43,13 @@ header div {
 }
 
 div#logo {
-	padding-left: 90px;
+	padding-left: 10%;
 	font-family: "Politica", Sans-Serif;
 	//width: 100px;
 	font-size: 28px;
 	.column(7);
 	width: 80%;
+	margin-top: 2%;
 }
 
 div#bar {
@@ -57,12 +61,12 @@ div#bar {
 header input[type=text] {
 	.column(5.7);
 	//.push(0.20);
-	width: 90%;
+	width: 88.5%;
 	margin-left: 3%;
 	height: 30px;
 	border: 5px solid #ececec;
 	font-size: 18px;
-	padding-left: 35px;
+	padding-left: 4%;
 	background: url("images/search.png") no-repeat 4px 4px;
 	background-color: #fff;
 	vertical-align: middle;
@@ -75,8 +79,8 @@ header input[type=text] {
 
 header select {
 	display: inline-block;
-	margin-left: -120px;
-	margin-top: 10px;
+	margin-left: -10%;
+	margin-top: 1%;
 }
 
 #opcoes {
@@ -94,14 +98,14 @@ header select {
 }
 
 #separator {
-	background-color: #ffff00;
-	.column(1);
-	height: 10px;
+	//.column(1);
 	width: 100%;
+	height: 5px;
+	vertical-align: top;
 }
 
 #container {
-	margin-top: 50px;
+	margin-top: 6%;
 	background-color: #a5a5a5;
 	padding: 25px;
 
@@ -117,8 +121,8 @@ header select {
 
 	text-align: center;
 
-	margin-bottom: 25px;
-	padding: 25px 0;
+	margin-bottom: 3%;
+	padding: 2% 0;
 }
 
 a .politico:hover {
@@ -147,13 +151,10 @@ a .politico:hover {
 	border-color: #ff0000;
 }
 
-.marcado {
-	background-color: blue;
-}
-
 	// Politico:
 
 .candidato {
+
 }
 
 .candidato .info1 {
@@ -164,7 +165,7 @@ a .politico:hover {
 	background-color: inherit;
 	width: 90%;
 	margin-left: 4.5%;
-	padding-left: 25px;
+	padding-left: 2%;
 	text-align: left;
 }
 
@@ -179,7 +180,7 @@ a .politico:hover {
 	display: inline-block;
 	width: 200px;
 	vertical-align: middle;
-	margin-left: 15px;
+	margin-left: 2%;
 }
 
 .populometro {
@@ -187,11 +188,61 @@ a .politico:hover {
 	vertical-align: middle;
 }
 
+#comentarios {
+	.column(1);
+	width: 90%;
+	margin-left: 4.5%;
+	padding-left: 2%;
+	background-color: #a5a5a5;
+}
+
+.comentario {
+	background-color: #fff;
+	border: 2px solid #333;
+	padding: 2%;
+	margin: 3% 0;
+	margin-right: 3%;
+}
+
+.comentario .comentador, .origin {
+	display: inline-block;
+}
+
+.comentador {
+	color: #333;
+	font-size: 18px;
+	margin-right: 10px;
+}
+
+.comentador img {
+	width: 75px;
+	height: 75px;
+	border-radius: 100%;
+	vertical-align: middle;
+	margin-right: 1%;
+}
+
+.origin {
+	font-size: 14px;
+	color: #999;
+}
+
+.origin img {
+	width: 25px;
+	vertical-align: middle;
+}
+
+.impacto {
+	color: #999;
+}
+	
 	// Marcadores Gerais:
 
 .hidden {
-	width: 0;
-	height: 0;
+	width: 0px;
+	height: 0px;
+	padding: 0px !important;
+	margin: 0;
 	overflow: hidden;
 }
 
@@ -200,17 +251,21 @@ a .politico:hover {
 	.push(6);
 	height: 50px;
 	width: 20px;
-	display: box;
+	display: block;
+}
+
+.smaller {
+	height: 25px;
+}
+
+.marcado {
+	width: 14.28%;
+	background-color: #00ff00;
 }
 
 // MOBILE:
 
-@media screen and (max-width: 520px) {
-	header input[type=text] {
-		width: 85%;
-		margin-left: 3%;
-	}
-
+@media screen and (max-width: 800px) {
 	#opcoes {
 		display: block;
 	}
@@ -221,8 +276,24 @@ a .politico:hover {
 		border-bottom: 1px solid rgba(33, 33, 33, 0.5);
 	}
 
+	.marcado {
+		width: 50%;
+	}
+
 	.presidente {
 		width: 100%;
+	}
+
+	.presidente .marcado {
+		width: 100vw;
+	}
+}
+
+@media screen and (max-width: 540px) {
+	header input[type=text] {
+		width: 85%;
+		margin-left: 3%;
+		padding-left: 35px;
 	}
 
 	body {
@@ -233,6 +304,7 @@ a .politico:hover {
 		.column(1.5);
 		width: 66%;
 		margin-left: 13%;
+		margin-top: 10%;
 	}
 
 	.politico {
@@ -240,6 +312,24 @@ a .politico:hover {
 	}
 
 	.clear {
-		width: 100%;
+		width: 20px;
+		height: 25px;
+	}
+
+	.candidato .politico {
+		margin: 2.5% !important;
+	}
+
+	.candidato .politico .foto {
+		width: 40vw;
+		height: 40vw;
+	}
+
+	#comentarios {
+		margin: 2.5% !important;
+	}
+
+	input[type=range] {
+		margin-left: 130%;
 	}
 }

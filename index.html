@@ -24,9 +24,9 @@
 		<header>
 			<div id='a'>
 			<div id="logo">
-				<!-- img /-->
+				<img src="static/css/images/logo.jpg" />
 
-				<h1>Sauber</h1>
+				<!--h1>Sauber</h1-->
 			</div>
 
 			<div id="bar">
@@ -67,35 +67,31 @@
 					<input id="deputado-federal" type="hidden" name="deputado-federal" value="0">
 					<input id="senador" type="hidden" name="senador" value="0">
 					<input id="governador" type="hidden" name="governador" value="0">
-					<input id="prefeitos" type="hidden" name="prefeitos" value="0">
+					<input id="prefeito" type="hidden" name="prefeito" value="0">
 					<input id="deputado-estadual" type="hidden" name="deputado-estadual" value="0">
 					<input id="vereador" type="hidden" name="vereador" value="0">
 				</form>
 
 				<div id="opcoes">
-					<div class="opcao presidente" onclick="marcar(presidente, this);"><p>Presidente</p></div>
-					<div class="opcao" onclick="marcar(deputado-federal, this);"><p>Deputados Fed.</p></div>
-					<div class="opcao" onclick="marcar(senador, this);"><p>Senadores</p></div>
-					<div class="opcao" onclick="marcar(governador, this);"><p>Governadores</p></div>
-					<div class="opcao" onclick="marcar(prefeito, this);"><p>Prefeitos</p></div>
-					<div class="opcao" onclick="marcar(deputado-estadual, this);"><p>Deputados Est.</p></div>
-					<div class="opcao" onclick="marcar(vereador, this);"><p>Vereadores</p></div>
+					<div class="opcao presidente" onclick="marcar('presidente', this);"><p>Presidente</p></div>
+					<div class="opcao" onclick="marcar('deputado-federal', this);"><p>Deputados Fed.</p></div>
+					<div class="opcao" onclick="marcar('senador', this);"><p>Senadores</p></div>
+					<div class="opcao" onclick="marcar('governador', this);"><p>Governadores</p></div>
+					<div class="opcao" onclick="marcar('prefeito', this);"><p>Prefeitos</p></div>
+					<div class="opcao" onclick="marcar('deputado-estadual', this);"><p>Deputados Est.</p></div>
+					<div class="opcao" onclick="marcar('vereador', this);"><p>Vereadores</p></div>
 				</div>
 			</div>
 			</div>
 		</header>
 
-		<div id="separator">
-		</div>
+		<img id="separator" src="static/css/images/separator.jpg" />
 
 		<div class="clear">
 		</div>
 
-		<div id="container">
-<<<<<<< Updated upstream
-		
-=======
-			<a href="#candidato">
+		<div id="container" class="">
+			<a href="" style="cursor: pointer" onclick="goto(this)">
 			<div class="politico">
 				<img class="foto amarelo" src="https://www.drupal.org/files/profile_default.jpg" />
 
@@ -182,11 +178,10 @@
 				<p class="estado">Estado: .........</p>
 			</div>
 			</a>
->>>>>>> Stashed changes
 		</div>
 
 
-		<div id="candidato" class="candidato hidden">
+		<div id="candidato" class="candidato">
 			<div class="info1">
 				<div class="politico">
 					<img class="foto vermelho" src="https://www.drupal.org/files/profile_default.jpg" />
@@ -201,6 +196,29 @@
 					<div class="populometro">
 						<input type="range" name="popularidade" disabled min=0 value=45 max=100>
 					</div>
+				</div>
+			</div>
+
+			<div class="clear smaller">
+			</div>
+
+			<div id="comentarios">
+				<div class="comentario">
+					<p class="comentador"><img src="https://www.drupal.org/files/profile_default.jpg" /> Maria Lira</p>
+					<p class="origin">4 dias atr&aacute;s <img src="static/css/images/facebook.jpg" /></p>
+
+					<p class="conteudo">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. </p>
+
+					<p class="impacto">360 curtidas | 60 compartilhadas</p>
+				</div>
+
+				<div class="comentario">
+					<p class="comentador"><img src="https://www.drupal.org/files/profile_default.jpg" /> Thomas Jos&eacute;</p>
+					<p class="origin">4 dias atr&aacute;s <img src="static/css/images/twitter.jpg" /></p>
+
+					<p class="conteudo">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. </p>
+
+					<p class="impacto">190 favorites | 30 retweets</p>
 				</div>
 			</div>
 		</div>
