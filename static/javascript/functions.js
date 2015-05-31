@@ -15,13 +15,15 @@ findAll: function(nome , estado , cargp , partido ) {
 }
 }
 
-var estados = ["BR","AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RO", "RS", "RR", "SC", "SE", "SP", "TO" ] ;
-
-var typingTimer;           
-var doneTypingInterval = 5000
-
-$(document).on("keyup paste" , '#input_label' , function() {
+$(document).on("keyup paste" , '#input_label' , function()  {
 	CandidatoSvc.findAll($(this).val(), $("#estado_input option:selected").text() ).done(function(data) {
-                        console.log(data[0]) ;
+		var i ;
+		$("#container").empty() ;
+		for (i = 0 ; i < data.length ; i++ ){
+			if ( data[i].foto == null ) {
+				data[i].foto = "https://www.drupal.org/files/profile_default.jpg";
+			}
+				$("#container").append("<a href='#"+data[i].id+"'><div class='politico'>"+"<img class='foto amarelo' src='"+data[i].foto+"' />"+"<p class='nome'>Nome: "+data[i].nome+"</p>"+"<p class='cargo'>Cargo: "+data[i].cargo+"</p>"+"<p class='filiacao'>Partido: "+data[i].partido+"</p>"+"<p class='estado'>Estado: "+data[i].estado+"</p>"+"</div></a>");
+		}
         });	
 });
