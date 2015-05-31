@@ -1,3 +1,7 @@
+<<<<<<< Updated upstream
+=======
+/* LESS */
+>>>>>>> Stashed changes
 @import "grid.less";
 
 @import url("http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700");
@@ -5,6 +9,13 @@
 @columns: 8;
 @column-width: 200px;
 @gutter-width: 0;
+<<<<<<< Updated upstream
+=======
+
+/* WEB: */
+
+	/* Main: */
+>>>>>>> Stashed changes
 * {
 	color: #333;
 	font-family: "Open Sans Condensed", Sans-Serif;
@@ -23,8 +34,8 @@ body {
 }
 
 header {
-	margin-bottom: 6%;
 	width: 100%;
+	padding: 0;
 }
 
 #a {
@@ -40,10 +51,26 @@ header div {
 div#logo {
 	padding-left: 10%;
 	font-family: "Politica", Sans-Serif;
+<<<<<<< Updated upstream
+=======
+	/*width: 100px;*/
+>>>>>>> Stashed changes
 	font-size: 28px;
 	.column(7);
 	width: 80%;
 	margin-top: 2%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+div#notificacoes {
+	display: inline-block;
+	width: 60px;
+	margin-top: 50px;
+}
+
+div#notificacoes img {
+	height: 60px;
 }
 
 div#bar {
@@ -54,13 +81,18 @@ div#bar {
 
 header input[type=text] {
 	.column(5.7);
+<<<<<<< Updated upstream
+=======
+	/*.push(0.20);*/
+>>>>>>> Stashed changes
 	width: 88.5%;
 	margin-left: 3%;
 	height: 30px;
 	border: 5px solid #ececec;
 	font-size: 18px;
 	padding-left: 4%;
-	background: url("images/search.png") no-repeat 4px 4px;
+	background: url("images/search.jpg") no-repeat 4px 4px;
+	background-size: 25px;
 	background-color: #fff;
 	vertical-align: middle;
 }
@@ -80,6 +112,7 @@ header select {
 	.column(6.4);
 	display: block;
 	width: 100%;
+	text-align: left;
 }
 
 .opcao {
@@ -88,9 +121,15 @@ header select {
 	width: 14.28%;
 	background-color: rgba(255, 255, 0, 0.5);
 	cursor: pointer;
+	margin: 0px;
+	text-align: center;
 }
 
 #separator {
+<<<<<<< Updated upstream
+=======
+	/*.column(1);*/
+>>>>>>> Stashed changes
 	width: 100%;
 	height: 5px;
 	vertical-align: top;
@@ -143,6 +182,11 @@ a .politico:hover {
 	border-color: #ff0000;
 }
 
+<<<<<<< Updated upstream
+=======
+	/* Politico: */
+
+>>>>>>> Stashed changes
 .candidato {
 
 }
@@ -226,13 +270,17 @@ a .politico:hover {
 	color: #999;
 }
 	
+<<<<<<< Updated upstream
+=======
+	/* Marcadores Gerais: */
+>>>>>>> Stashed changes
 
 .hidden {
-	width: 0px;
-	height: 0px;
+	width: 0px !important;
+	height: 0px !important;
 	padding: 0px !important;
-	margin: 0;
-	overflow: hidden;
+	margin: 0 !important;
+	overflow: hidden !important;
 }
 
 .clear {
@@ -250,8 +298,15 @@ a .politico:hover {
 .marcado {
 	width: 14.28%;
 	background-color: #00ff00;
+	text-align: center;
+	cursor: pointer;
 }
 
+<<<<<<< Updated upstream
+=======
+/* MOBILE: */
+
+>>>>>>> Stashed changes
 @media screen and (max-width: 800px) {
 	#opcoes {
 		display: block;
