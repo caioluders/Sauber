@@ -74,7 +74,6 @@ header input[type=text] {
 	}
 
 header select {
-	border-radius: 0;
 	display: inline-block;
 	margin-left: -120px;
 	margin-top: 10px;
@@ -148,6 +147,54 @@ a .politico:hover {
 	border-color: #ff0000;
 }
 
+.marcado {
+	background-color: blue;
+}
+
+	// Politico:
+
+.candidato {
+}
+
+.candidato .info1 {
+	background-color: #a5a5a5;
+}
+
+.candidato .politico {
+	background-color: inherit;
+	width: 90%;
+	margin-left: 4.5%;
+	padding-left: 25px;
+	text-align: left;
+}
+
+.candidato .politico .foto {
+	width: 250px;
+	height: 250px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.text-info {
+	display: inline-block;
+	width: 200px;
+	vertical-align: middle;
+	margin-left: 15px;
+}
+
+.populometro {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+	// Marcadores Gerais:
+
+.hidden {
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+
 .clear {
 	.column(1);
 	.push(6);
@@ -156,20 +203,26 @@ a .politico:hover {
 	display: box;
 }
 
-.marcado {
-	background-color: blue;
-}
-
 // MOBILE:
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 520px) {
 	header input[type=text] {
 		width: 85%;
 		margin-left: 3%;
 	}
 
+	#opcoes {
+		display: block;
+	}
+
 	.opcao {
-		display: box;
+		display: block;
+		width: 50%;
+		border-bottom: 1px solid rgba(33, 33, 33, 0.5);
+	}
+
+	.presidente {
+		width: 100%;
 	}
 
 	body {
@@ -178,12 +231,12 @@ a .politico:hover {
 
 	#container {
 		.column(1.5);
-		width: 300px;
-		margin-left: 28%;
+		width: 66%;
+		margin-left: 13%;
 	}
 
 	.politico {
-		.column(1.5);
+		width: 100%;
 	}
 
 	.clear {
